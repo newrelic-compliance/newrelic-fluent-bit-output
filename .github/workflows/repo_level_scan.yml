@@ -126,6 +126,7 @@ jobs:
     with:
       image-name: ${{ needs.build.outputs.image-base }}${{ matrix.image.suffix }}
       scan-name: ${{ matrix.image.name }}
+      fail-on-findings: true
     secrets:
       TEAM_SLACK_WEBHOOK_URL: ${{ secrets.TEAM_SLACK_WEBHOOK_URL }}
 
